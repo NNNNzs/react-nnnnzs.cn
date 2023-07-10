@@ -2,7 +2,6 @@ import HomeLayout from "./components/HomeLayout";
 
 export default async function Home() {
   const post: ResponeBody<PageQueryRes<Post>> = await getPost();
-  console.log(post);
   return <HomeLayout data={post.data.record} />;
 }
 

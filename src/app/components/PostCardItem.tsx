@@ -2,6 +2,7 @@ import PostCardTags from "./PostCardTags";
 import dayjs from "dayjs";
 import Image from "next/image";
 import "./PostCardItem.scss";
+import dynamic from "next/dynamic";
 
 const dateFormat = (date: Post["date"]) => {
   if (!date) return "";
@@ -28,6 +29,10 @@ const toLink = (post: Post) => {
 };
 
 const target = "_blank";
+
+const MarkDown = dynamic(() => import("./Markdown"), {
+  ssr: false,
+});
 
 export default function PostCardItem({ post }: { post: Post }) {
   return (
@@ -62,12 +67,7 @@ export default function PostCardItem({ post }: { post: Post }) {
           {post?.description}
         </p>
         <p className="post-content bg-white dark:bg-slate-800 text-gray-500 leading-10">
-          {/* <MdEditor
-            preview-theme="cyanosis"
-            editor-id={`post-editor-${post.id}`}
-            theme="theme"
-            previewOnly={true}
-          ></MdEditor> */}
+          <MarkDown value={post.content} id={`post_${post.id}`}></MarkDown>
         </p>
 
         <p className="text-slate-700 dark:text-slate-400 post-meta hidden md:block">

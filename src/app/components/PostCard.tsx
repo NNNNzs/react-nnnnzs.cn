@@ -1,7 +1,6 @@
 import PostCardItem from "./PostCardItem";
 
 export default function PostCard({ postList }: { postList: Post[] }) {
-  console.log("postList", postList);
   return (
     <>
       <ul>

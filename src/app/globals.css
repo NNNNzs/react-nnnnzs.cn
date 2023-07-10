@@ -5,3 +5,7 @@
 body {
   background: #efefef
 }
+
+.dark .md-editor-dark {
+  --md-bk-color: theme(colors.slate.900);
+}

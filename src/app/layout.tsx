@@ -11,7 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh">
-      <body className="w-screen h-screen">{children}</body>
+      <body className="w-screen h-screen overflow-x-hidden bg-[#efefef] dark:bg-slate-900">
+        {children}
+      </body>
     </html>
   );
 }
