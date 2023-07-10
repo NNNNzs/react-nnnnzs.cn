@@ -2,6 +2,8 @@ import Search from "./Seach";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import GitHubIcon from "../icons/github.svg";
+const githubPage = "https://github.com/NNNNzs/react-nnnnzs.cn";
+
 interface MenuItem {
   name: string;
   path: string;
@@ -44,7 +46,7 @@ export default function Header() {
             <a
               target="_blank"
               className="mr-4 h-full align-middle flex items-center"
-              href="https://github.com/NNNNzs/nnnnzs.cn"
+              href={githubPage}
             >
               <GitHubIcon className="text-[1.2rem]"></GitHubIcon>
             </a>
