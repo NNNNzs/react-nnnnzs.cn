@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Banner from './Banner'
 import Footer from "./Footer";
 import PostCard from "./PostCard";
 
@@ -10,7 +10,7 @@ export default function HomeLayout({ data }: Props) {
   return (
     <>
       <div className="relative">
-        <Header />
+        <Banner />
         <PostCard postList={data}></PostCard>
         <Footer />
       </div>
