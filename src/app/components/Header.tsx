@@ -20,7 +20,7 @@ export default function Header() {
     { name: "归档", path: "/timeline" },
   ];
   return (
-    <header className="header h-[3rem] sticky bg-white text-slate-900 dark:bg-slate-900 dark:text-white top-0 ">
+    <header className="header h-[3rem] sticky bg-white text-slate-900 dark:bg-slate-900 dark:text-white top-0 z-10">
       <div className="mx-auto container h-full px-4">
         <div className="mx-auto h-full menu flex items-center justify-between leading-8 ">
           <a className="text-xl text-center align-bottom" href="/">
