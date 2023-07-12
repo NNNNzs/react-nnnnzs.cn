@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3301",
+    "prepm2": "next build",
+    "pm2": "pm2 start ecosystem.config.cjs --only react.nnnnzs.cn ",
     "lint": "next lint"
   },
   "dependencies": {
