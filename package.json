@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3301",
-    "prepm2": "next build",
+    "scp":"scp -r  .next/* nnnnzs@vpc.nnnnzs.cn:/www/wwwroot/react.nnnnzs.cn/.next",
     "pm2": "pm2 start ecosystem.config.cjs --only react.nnnnzs.cn ",
     "lint": "next lint"
   },
